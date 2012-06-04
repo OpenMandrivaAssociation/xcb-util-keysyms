@@ -10,7 +10,7 @@ Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT
 Group:		System/X11
-BuildRequires:	xcb-util-devel >= 0.3.8
+BuildRequires:	xcb-util-devel >= 0.3.9
 BuildRequires:	x11-util-macros
 
 %description
@@ -24,7 +24,7 @@ the X protocol but which have traditionally been provided by Xlib.
 %package -n %{libname}
 Summary:	xcb-util-keysyms library package
 Group:		System/X11
-Conflicts:	%{mklibname xcb-keysyms 1} < 0.3.8
+Conflicts:	%{mklibname xcb-keysyms 1} < 0.3.9
 
 %description -n %{libname}
 The xcb-util module provides a number of libraries which sit on top of
@@ -42,8 +42,8 @@ Group:		Development/C
 Provides:	libxcb-util-keysyms-devel = %{version}-%{release}
 Provides:	xcb-util-keysyms-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
-Conflicts:	%{mklibname xcb-util -d} < 0.3.8
-Conflicts:	%{mklibname xcb-util -d -s} < 0.3.8
+Conflicts:	%{mklibname xcb-util -d} < 0.3.9
+Conflicts:	%{mklibname xcb-util -d -s} < 0.3.9
 
 %description -n %{develname}
 This pakcage includes the development files required to build software against

@@ -68,18 +68,3 @@ This pakcage includes the development files required to build software against
 %{_libdir}/libxcb-keysyms.so
 %{_libdir}/pkgconfig/xcb-keysyms.pc
 
-
-%changelog
-* Mon Jun 04 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.3.9-1
-+ Revision: 802331
-- versioning fix
-- version update 0.3.9
-
-* Mon Feb 20 2012 Götz Waschk <waschk@mandriva.org> 0.3.8-2
-+ Revision: 778050
-- remove libtool archive
-
-* Wed Oct 26 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 0.3.8-1
-+ Revision: 707426
-- import xcb-util-keysyms
-

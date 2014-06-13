@@ -5,7 +5,7 @@
 Summary:	xcb-util's xcb-keysyms
 Name:		xcb-util-keysyms
 Version:	0.3.9
-Release:	6
+Release:	7
 Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT

@@ -2,10 +2,12 @@
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
+%global optflags %{optflags} -O3
+
 Summary:	xcb-util's xcb-keysyms
 Name:		xcb-util-keysyms
 Version:	0.4.0
-Release:	5
+Release:	6
 Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT
@@ -50,14 +52,14 @@ This pakcage includes the development files required to build software against
 %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure --disable-static --with-pic
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libxcb-keysyms.so.%{major}*

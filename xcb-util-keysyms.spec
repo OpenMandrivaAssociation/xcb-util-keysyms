@@ -12,14 +12,14 @@
 
 Summary:	xcb-util's xcb-keysyms
 Name:		xcb-util-keysyms
-Version:	0.4.0
-Release:	7
+Version:	0.4.1
+Release:	1
 Url:		http://xcb.freedesktop.org
-Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
+Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.xz
 License:	MIT
 Group:		System/X11
-BuildRequires:	xcb-util-devel >= %{version}
-BuildRequires:	x11-util-macros
+BuildRequires:	pkgconfig(xcb-util)
+BuildRequires:	pkgconfig(xorg-macros)
 %if %{with compat32}
 BuildRequires:	devel(libxcb-util)
 BuildRequires:	devel(libxcb)
@@ -120,7 +120,7 @@ cd build
 %{_libdir}/libxcb-keysyms.so.%{major}*
 
 %files -n %{develname}
-%doc ChangeLog NEWS README
+%doc ChangeLog NEWS README.md
 %{_includedir}/xcb/xcb_keysyms.h
 %{_libdir}/libxcb-keysyms.so
 %{_libdir}/pkgconfig/xcb-keysyms.pc
